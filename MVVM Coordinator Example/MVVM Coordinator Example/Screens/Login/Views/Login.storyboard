@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="Y6W-OH-hqX" customClass="LoginViewController" customModule="MVVM_Coordinator_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bNO-yu-z6t">
+                                <rect key="frame" x="32" y="94" width="350" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R5N-jC-X8r">
+                                <rect key="frame" x="32" y="144" width="350" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iD-fb-4zh">
+                                <rect key="frame" x="32" y="194" width="350" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Login"/>
+                                <connections>
+                                    <action selector="loginButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MTs-hp-uXl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kgn-UD-eki">
+                                <rect key="frame" x="32" y="432.5" width="350" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismissButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="t3A-Ch-06G"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4l-6X-3Ff">
+                                <rect key="frame" x="32" y="241" width="350" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Register"/>
+                                <connections>
+                                    <action selector="registerButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LmL-6X-bv4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="R5N-jC-X8r" firstAttribute="top" secondItem="bNO-yu-z6t" secondAttribute="bottom" constant="16" id="89z-lw-sdA"/>
+                            <constraint firstItem="R5N-jC-X8r" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="Auw-zd-2of"/>
+                            <constraint firstItem="1iD-fb-4zh" firstAttribute="top" secondItem="R5N-jC-X8r" secondAttribute="bottom" constant="16" id="Een-ks-BLv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="R5N-jC-X8r" secondAttribute="trailing" constant="32" id="HlP-A3-qjx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1iD-fb-4zh" secondAttribute="trailing" constant="32" id="HwM-sz-whf"/>
+                            <constraint firstItem="1iD-fb-4zh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="MWa-yp-ZrC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="E4l-6X-3Ff" secondAttribute="trailing" constant="32" id="ZhC-23-HTI"/>
+                            <constraint firstItem="E4l-6X-3Ff" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="ccL-PM-K6B"/>
+                            <constraint firstItem="bNO-yu-z6t" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="fWh-J3-0Fa"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bNO-yu-z6t" secondAttribute="trailing" constant="32" id="ijb-3m-r9T"/>
+                            <constraint firstItem="bNO-yu-z6t" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="jcr-CA-lqq"/>
+                            <constraint firstItem="Kgn-UD-eki" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="32" id="kih-qD-Zv0"/>
+                            <constraint firstItem="E4l-6X-3Ff" firstAttribute="top" secondItem="1iD-fb-4zh" secondAttribute="bottom" constant="16" id="lIk-ys-mGR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Kgn-UD-eki" secondAttribute="trailing" constant="32" id="o2h-L0-pUk"/>
+                            <constraint firstItem="Kgn-UD-eki" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="pdj-rc-x0l"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="135"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
