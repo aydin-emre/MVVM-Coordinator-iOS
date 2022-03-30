@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol StoryboardInstantiable: AnyObject {
+protocol StoryboardInstantiable: AnyObject {
     associatedtype VCType
 
     static var storyboardFileName: String { get }
@@ -21,11 +21,11 @@ extension StoryboardInstantiable where Self: UIViewController {
         return storyboardIdentifier.components(separatedBy: "ViewController").first!
     }
 
-    public static var storyboardIdentifier: String {
+    static var storyboardIdentifier: String {
         return NSStringFromClass(Self.self).components(separatedBy: ".").last!
     }
 
-    public static func instanceFromStoryboard(_ bundle: Bundle? = nil) -> Self {
+    static func instanceFromStoryboard(_ bundle: Bundle? = nil) -> Self {
         let fileName = storyboardFileName
         let storyBoard = UIStoryboard(name: fileName, bundle: bundle)
         return storyBoard.instantiateViewController(withIdentifier: self.storyboardIdentifier) as! Self
